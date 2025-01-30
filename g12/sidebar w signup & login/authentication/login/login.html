@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="b.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div onclick="window.location.href='../../index.html';" class="fas fa-chevron-left"></div>
+            Login
+        </header>
+        <div class="form-outer">
+            <form action="#">
+                <div class="page slide-page">
+                    <div class="title">
+                        Login Details:
+                    </div>
+                    <div class="field">
+                        <div class="label">
+                            Username
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" id="username" placeholder="input username here">
+                            <i class="fas fa-exclamation-circle validation-icon" id="username-error"></i>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="label">
+                            Password
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="password" id="password" placeholder="input password here">
+                            <i class="fas fa-exclamation-circle validation-icon" id="password-error"></i>
+                        </div>
+                    </div>
+                    <div class="field btns">
+                        <button class="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="b.js"></script>
+</body>
+</html>

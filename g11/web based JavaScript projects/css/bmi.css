@@ -1,0 +1,163 @@
+section {
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+/*bmi*/
+
+.choices12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:var(--tertiary-color);
+   
+    overflow-x: hidden;
+    text-align: center;
+    border: 2px solid var(--quinary-color);
+    position: relative;
+    width: 300px; /* Adjust the width as needed */
+    height: 270px; /* Adjust the height as needed */
+}
+#val {
+    color: var( ---quaternary-color);
+}
+#zodiaclogo {
+    top:1rem;
+}
+.logobmi {
+    color: var( ---quaternary-color);
+    position: absolute;
+    top: 25px;
+    display: flex;
+    }
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    top:1.5rem;
+    position: relative;
+    
+}
+#HEIGHT{
+     
+    display: flex;
+    outline: 0;
+  border-width: 0 0 2px;
+  border-color:var( --quinary-color);
+    background: var( --tertiary-color);
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 25px;
+  width: 12rem;
+}
+
+#WEIGHT {
+    
+    display: flex;
+    outline: 0;
+  border-width: 0 0 2px;
+  border-color: var( --quinary-color);
+  background: var(--tertiary-color);
+  color:var(--primary-color);
+  text-align: center;
+  
+  width: 12rem;
+  font-size: 25px;
+  height: auto;
+}
+#BUTTONN{
+    position: relative;
+ padding:0 1rem 1.5rem;
+    width: 113px;
+    height: 30px;
+    font-size: 20px;
+     border:2px solid var(--quinary-color);
+  background: var( --tertiary-color);
+  color:var(--primary-color);
+  text-align: center;
+  align-self: center;
+  top:1rem;
+  
+  
+ }
+/* hide + show */
+.popup-background {
+    display: none;
+    
+    position: absolute;
+    width: auto; /* Adjust the width as needed */
+    height: 100%; 
+    
+    
+    background: var( --tertiary-color);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1000;
+    
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 300px; /* Adjust the width as needed */
+    height: 270px; 
+    background: var( --tertiary-color);
+    border: 2px solid var( --quinary-color);
+    
+    box-shadow: 0 0 20px var(--secondary-color);
+    
+    
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    padding: 10px;
+    border-bottom: 1px solid var( --quinary-color);
+}
+
+.result-title {
+    color: var( ---quaternary-color);
+    font: 20px Inter, sans-serif;
+}
+
+.close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    color: var( --quinary-color);
+    background: var(--tertiary-color);
+    border-radius: 14px;
+}
+
+.x {
+    width: 16px;
+    aspect-ratio: 1 / 1;
+}
+
+
+
+.result-container {
+    width: auto;
+    height: auto;
+    padding: 60px;
+}
+.bmi-result {
+   font-size: 1.3rem;
+       color:var( --quinary-color);
+      display: inline;
+       text-align: center;
+}
+
+
+

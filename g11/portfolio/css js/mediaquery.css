@@ -1,0 +1,204 @@
+/* for small mobile */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for medium mobile */
+@media screen and (min-width:375px) {
+  
+  #p-p{
+    font-size: 20px;
+}
+
+  #legal-p{
+  
+  font-size:12px;
+  left:5px;
+}
+.c-body{
+    height: 490px;
+    width:310px;
+}
+
+}
+
+
+#p-p{
+    font-size: 20px;
+}
+
+  #legal-p{
+  
+  font-size:12px;
+  left:4%;
+}
+.c-body{
+    height: 490px;
+    width:310px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+
+
+
+    ul{
+        gap: 25px;
+    }
+    #p-h1{
+        font-size: 25px;
+    }
+li a{
+ font-size: 25px;  
+}
+
+#hehehe{
+    right:0;
+    font-size: 30px;
+}
+.social-container{
+    padding: 65px 0 0;
+    font-size: 20px;
+}
+
+#legal-p{
+    left: 23%;
+    top:10%;
+}
+p{
+    font-size: ;
+}
+ #p-h1{
+        font-size: 25px;
+    }
+/*contacts*/
+.contacts{
+    flex-direction: row;
+}
+#spp{
+   font-size: 75px;
+}
+#gmail{
+    font-size: 25px,;
+}
+/* movies */
+.flip-card{
+      width: 170px;
+  height: 270px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LAPTOP */
+@media screen and (min-width: 1024px) {
+
+/* books */
+#books{
+    height: 100vh;
+}
+ #p-h1{
+        font-size: 30px;
+    }
+    #p-p{
+        font-size: 33px;
+    }
+
+.m-title{
+    font-size: 35px;
+}
+.m-bio{
+    font-size: 20px;
+}
+ .movie2 {
+     flex-direction: row;
+    top:60px;
+ }
+
+.movie-bios{
+    top:40px;
+}
+
+
+.flip-card{
+      width: 200px;
+  height: 300px;
+}
+
+/* contact */
+.c-body{
+    height: 520px;
+    width:370px;
+}
+#gmail{
+    font-size: 37px,;
+}
+
+/*footer*/
+#legal-p{
+    left:30%;
+}
+.contacts{
+   justify-content: center;
+}
+
+}
+
+
+
+
+
+
+
+
+/* DESKTOP */
+@media screen and (min-width: 1140x) {
+    .c-body{
+    height: 540px;
+    width:390px;
+}
+#spp{
+   font-size:105px;
+}    
+#gmail{
+    font-size: 45px,;
+}
+.social{
+    font-size: 23px;
+}
+}
+

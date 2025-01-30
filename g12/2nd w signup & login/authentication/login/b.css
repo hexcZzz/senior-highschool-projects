@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+    --1: #151515; /* Dark Gray */
+    --2: #202020; /* Medium Dark Gray */
+    --4: #404040; /* Light Gray */
+    --br: #303030; /* Border Gray */
+    --bg: #000; /* Black */
+    --pbg: #101010; /* Near Black */
+    --t1: #FFFFFF; /* White */
+    --t2: #AAAAAA; /* Light Gray Text */
+    --t3: #444444; /* Medium Gray Text */
+    --dark-accent: #2b2b2b; /* Dark Accent Color */
+}
+
+input::placeholder {
+    color:var(--t3);
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+::selection {
+    color: var(--t1);
+    background: var(--dark-accent);
+}
+
+.container {
+    width: 330px;
+    background: var(--pbg);
+    color: var(--t1);
+    text-align: center;
+    border-radius: 5px;
+    padding: 50px 35px 10px 35px;
+    border: 1px solid var(--br);
+}
+
+.container header {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    color: var(--t1);
+}
+
+.container header div {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--br);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container .progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.container .progress-bar .step {
+    display: flex;
+    align-items: center;
+}
+
+.container .progress-bar .step p {
+    margin: 0;
+}
+
+.container .progress-bar .bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--t1);
+    border-radius: 50%;
+    margin: 0 10px;
+    color: var(--t1);
+}
+
+.container .progress-bar .check {
+    color: var(--t1);
+}
+
+.container .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container .form-outer form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.form-outer form .page {
+    width: 100%;
+    background: var(--pbg);
+}
+
+.form-outer form .page .title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--t1);
+    margin-bottom: 20px;
+}
+
+.form-outer form .page .field {
+    width: 330px;
+    height: 45px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+}
+
+.form-outer form .page .field .label {
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+    color: var(--t2);
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input {
+    height: 100%;
+    width: calc(100% - 24px); /* Adjust for icon width */
+    border: 1px solid var(--br);
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+    color: var(--t1);
+    background: var(--pbg);
+}
+
+.validation-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--t2);
+    font-size: 18px;
+    display: none; /* Hide by default */
+}
+
+input.error-visible + .validation-icon {
+    display: inline; /* Show icon when input has error-visible class */
+}
+
+input:focus + .validation-icon {
+    display: none; /* Hide icon when input is focused */
+}
+
+input:not(:placeholder-shown) + .validation-icon {
+    display: none; /* Hide icon when input has text */
+}
+
+form .page .field button {
+    width: 100%;
+    height: calc(100% + 5px);
+    border: none;
+    background: var(--dark-accent);
+    margin-top: -20px;
+    border-radius: 5px;
+    color: var(--t1);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+form .page .field button:hover {
+    background: var(--br);
+}
+
+.container .form-outer .btns button {
+    margin-top: -20px !important;
+}
+
+.container .form-outer .btns button.submit {
+    font-size: 18px;
+    font-weight: 500;
+}

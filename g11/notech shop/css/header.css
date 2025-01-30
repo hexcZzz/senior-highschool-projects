@@ -1,0 +1,62 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    padding: 0 100px;
+    z-index: 1000;
+    background: #ddd;
+    border-bottom: 1px solid #aaa;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 60px;
+    aspect-ratio: 1 / 1;
+}
+
+.notech {
+    color: #000000;
+    font: 3rem Outfit;
+    user-select: none;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link {
+    transition: 0.2s;
+    font: 1.6rem Outfit;
+}
+
+.link:hover {
+    color: #000000;
+}
+
+.cart {
+    font-size: 2rem;
+    transition: 0.2s;
+}
+
+.cta {
+    color: #eee;
+    background: #000000;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font: 600 1.2rem Outfit;
+    transition: 0.2s;
+}
+
+.cta:hover {
+    background: #606060;
+}
