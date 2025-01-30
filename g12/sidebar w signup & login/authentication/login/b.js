@@ -17,31 +17,16 @@ function validateInput(input) {
 
 // Add event listeners for validation on all inputs
 inputs.forEach(input => {
-    input.addEventListener("blur", () => validateInput(input));
-    input.addEventListener("input", () => validateInput(input));
-});
-
-// Handle form navigation
-document.querySelectorAll(".next").forEach(btn => {
-    btn.addEventListener("click", (event) => {
-        const currentPage = event.target.closest(".page");
-        const nextPage = currentPage.nextElementSibling;
-        if (nextPage) {
-            currentPage.style.display = "none";
-            nextPage.style.display = "block";
-        }
+    input.addEventListener("focus", () => {
+        const errorIcon = input.nextElementSibling;
+        errorIcon.style.display = "none";  // Ensure the error icon is hidden when the field is focused
     });
-});
 
-document.querySelectorAll(".prev").forEach(btn => {
-    btn.addEventListener("click", (event) => {
-        const currentPage = event.target.closest(".page");
-        const prevPage = currentPage.previousElementSibling;
-        if (prevPage) {
-            currentPage.style.display = "none";
-            prevPage.style.display = "block";
-        }
+    input.addEventListener("blur", () => {
+        validateInput(input); // Validate input on blur
     });
+
+    input.addEventListener("input", () => validateInput(input)); // Validate input when typing
 });
 
 // Handle form submission

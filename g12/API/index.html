@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The MEAL DB</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          The MEAL DB
+        </div>
+        
+      </nav>
+    </header>
+
+<div class="input">
+      <input type="text" id="SearchName" placeholder="Enter meal name or id" />
+      
+    </div>
+    <h2>Select Letter:</h2>
+    <div class="input">
+      <select id="letterSelect">
+        <option value="">Select a letter</option>
+        <option value="a">A</option>
+        <option value="b">B</option>
+        <option value="c">C</option>
+        <option value="d">D</option>
+        <option value="e">E</option>
+        <option value="f">F</option>
+        <option value="g">G</option>
+        <option value="h">H</option>
+        <option value="i">I</option>
+        <option value="j">J</option>
+        <option value="k">K</option>
+        <option value="l">L</option>
+        <option value="m">M</option>
+        <option value="n">N</option>
+        <option value="o">O</option>
+        <option value="p">P</option>
+        <option value="q">Q</option>
+        <option value="r">R</option>
+        <option value="s">S</option>
+        <option value="t">T</option>
+        <option value="u">U</option>
+        <option value="v">V</option>
+        <option value="w">W</option>
+        <option value="x">X</option>
+        <option value="y">Y</option>
+        <option value="z">Z</option>
+      </select>
+    </div>
+
+    <h2>Select Category:</h2>
+    <div class="category">
+      <select id="categorySelect">
+        <option value="">Select a category</option>
+<option value="beef">🍖 Beef</option>
+<option value="chicken">🍗 Chicken</option>
+<option value="dessert">🍰 Dessert</option>
+<option value="lamb">🍖 Lamb</option>
+<option value="miscellaneous">🔄 Miscellaneous</option>
+<option value="pasta">🍝 Pasta</option>
+<option value="pork">🥓 Pork</option>
+<option value="seafood">🦞 Seafood</option>
+<option value="side">🍽️ Side</option>
+<option value="starter">🍴 Starter</option>
+<option value="vegan">🌱 Vegan</option>
+<option value="vegetarian">🥗 Vegetarian</option>
+<option value="breakfast">🍳 Breakfast</option>
+<option value="goat">🐐 Goat</option>
+      </select>
+    </div>
+
+    <h2>Select Area:</h2>
+    <div class="areas">
+      <select id="areaSelect">
+        <option value="">Select an area</option>
+       <option value="american">🇺🇸 American</option>
+<option value="british">🇬🇧 British</option>
+<option value="canadian">🇨🇦 Canadian</option>
+<option value="chinese">🇨🇳 Chinese</option>
+<option value="croatian">🇭🇷 Croatian</option>
+<option value="dutch">🇳🇱 Dutch</option>
+<option value="egyptian">🇪🇬 Egyptian</option>
+<option value="filipino">🇵🇭 Filipino</option>
+<option value="french">🇫🇷 French</option>
+<option value="greek">🇬🇷 Greek</option>
+<option value="indian">🇮🇳 Indian</option>
+<option value="irish">🇮🇪 Irish</option>
+<option value="italian">🇮🇹 Italian</option>
+<option value="jamaican">🇯🇲 Jamaican</option>
+<option value="japanese">🇯🇵 Japanese</option>
+<option value="kenyan">🇰🇪 Kenyan</option>
+<option value="malaysian">🇲🇾 Malaysian</option>
+<option value="mexican">🇲🇽 Mexican</option>
+<option value="moroccan">🇲🇦 Moroccan</option>
+<option value="polish">🇵🇱 Polish</option>
+<option value="portuguese">🇵🇹 Portuguese</option>
+<option value="russian">🇷🇺 Russian</option>
+<option value="spanish">🇪🇸 Spanish</option>
+<option value="thai">🇹🇭 Thai</option>
+<option value="tunisian">🇹🇳 Tunisian</option>
+<option value="ukrainian">🇺🇦 Ukrainian</option>
+<option value="unknown">❓ Unknown</option>
+<option value="vietnamese">🇻🇳 Vietnamese</option>
+      </select>
+    </div>
+
+    <div id="ingredients-container"></div>
+    
+<div id="meal-details-container"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

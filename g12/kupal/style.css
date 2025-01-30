@@ -1,0 +1,307 @@
+/* ----------------------------------------
+   :root - CSS Variables
+   This section defines global CSS variables for consistent theming.
+---------------------------------------- */
+:root {
+    --1: #151515;   /* Dark gray - Primary content background or text */
+    --2: #202020;   /* Slightly lighter dark gray - Secondary content or borders */
+    --4: #404040;   /* Medium gray - Accents or buttons */
+    --br: #303030;  /* Border color - Dark gray for borders */
+    --bg: #000000;  /* Black - Page background */
+    --pbg: #101010; /* Almost black - Panel background or containers */
+    --t1: #FFFFFF;  /* White - Primary text */
+    --t2: #AAAAAA;  /* Light gray - Secondary text */
+    --t3: #444444;  /* Darker gray - Tertiary text or disabled elements */
+}
+
+/* ----------------------------------------
+   Global Styles
+   This section sets default styles for all elements.
+---------------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+    font-family: sans-serif; /* Default font for the document */
+    color: var(--t1); /* Set text color to white */
+    background-color: var(--bg); /* Set background color to black */
+    text-decoration: none; /* Remove underline from links */
+    text-align: center; /* Center align text */
+}
+
+/* ----------------------------------------
+   Input Styles
+   Styles for input fields and selection dropdowns.
+---------------------------------------- */
+
+header {
+    background-color:rgb(60, 60, 60);
+    
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.input {
+    padding: 1.5rem; /* Space around the input container */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    gap: 1rem; /* Space between items */
+   
+    border: none; /* No border */
+    outline: none; /* No outline on focus */
+}
+
+#logo {
+    width: 5rem;
+    height: 5rem;
+    
+}
+.category {
+    padding: 1.5rem; /* Space around the category container */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    gap: 0.5; /* Space between items */
+    outline: none; /* No outline on focus */
+   
+}
+
+/* Dropdown styles for letter, category, and area selects */
+#letterSelect, #areaSelect, #categorySelect {
+    width: 10rem; /* Fixed width for dropdowns */
+    height: 1.5rem; /* Fixed height for dropdowns */
+    border-radius:1rem;
+}
+
+/* ----------------------------------------
+   Area Styles
+   Styles specifically for the area selection dropdown.
+---------------------------------------- */
+.areas {
+    padding: 1.5rem; /* Space around the area container */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    gap: 1rem; /* Space between items */
+    font-size: 10px; /* Smaller font size */
+    border: none; /* No border */
+    outline: none; /* No outline on focus */
+}
+
+/* ----------------------------------------
+   Meal Styles
+   Styles for displaying meal items.
+---------------------------------------- */
+.meal {
+    background-color: var(--4); /* Medium gray background */
+    padding: 1.5rem; /* Space around the meal container */
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for meal items */
+    border-radius: 12px; /* Rounded corners */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space out items */
+    color: var(--t1); /* Set text color to white */
+}
+
+/* Container styles for the meal display */
+.container {
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to next line */
+    gap: 2rem; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Button styles */
+.btn {
+    text-decoration: none; /* Remove underline from links */
+    background-color: var(--2); /* Slightly lighter gray for buttons */
+    color: var(--t1); /* Set text color to white */
+    width: 100%; /* Full width */
+    border-radius: 12px; /* Rounded corners */
+    padding: 12px; /* Space inside button */
+    text-align: center; /* Center align text inside button */
+}
+
+/* Title styles for meal titles */
+.title {
+    font-size: 1rem; /* Font size for titles */
+    color: var(--t1); /* Set text color to white */
+    text-decoration: none; /* Remove underline from links */
+    height: auto; /* Auto height */
+    color: white; /* Set color to white */
+    background-color: var(--4); /* Medium gray background */
+    padding:0.3rem;
+}
+
+/* ----------------------------------------
+   Navigation Styles
+   Styles for the navigation bar.
+---------------------------------------- */
+nav {
+    padding: 2.5rem; /* Space around the navigation */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the navigation */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+    background-color: var(--1); /* Dark gray background for navigation */
+    border-bottom: 1px solid var(--br); /* Bottom border color */
+    filter: blur(5px);
+    font-size: 2.5rem;
+}
+
+/* Styles for unordered list in navigation */
+ul {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    gap: 1.5rem; /* Space between list items */
+}
+
+ul li {
+    list-style: none; /* Remove bullet points */
+}
+
+/* Link styles */
+a {
+    color: var(--t1); /* Set link color to white */
+}
+
+a:hover {
+    color: var(--t2); /* Change link color on hover to light gray */
+}
+
+/* ----------------------------------------
+   Meal Details Styles
+   Styles for meal details display.
+---------------------------------------- */
+#meal-details-container {
+    overflow: hidden; /* Hide overflow */
+    width: 100%; /* Full width */
+    padding: 10rem 5rem 10rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.meal-details {
+    width: 100%; /* Full width for meal details */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    gap:1rem;
+    
+    
+}
+
+/* Image styles for meals */
+.meal-details img {
+    width: 20rem; /* Fixed width for meal images */
+   
+}
+
+/* Meal image styles */
+.meal-image {
+    width: 12rem; /* Fixed width for meal images */
+    text-align: center; /* Center align image */
+    height: auto; /* Auto height */
+    border-radius: 0.5rem; /* Rounded corners */
+    border:2px solid var(--2);
+}
+
+/* Ingredient image styles */
+.ingredient-image {
+    width: 2rem; /* Fixed width for ingredient images */
+    height: 8rem; /* Fixed height for ingredient images */
+    border-radius: 0.5rem; /* Rounded corners */
+    vertical-align: middle; /* Align with text */
+}
+
+/* ----------------------------------------
+   Input Field Styles
+   Styles for input fields.
+---------------------------------------- */
+#SearchName {
+    border: none; /* Remove default borders */
+    border-bottom: 1.5px solid grey; /* Set bottom border */
+    outline: none; /* Remove outline on focus */
+    width: 22rem;
+    font-size:2rem ;
+}
+
+#btnSearch {
+    border: 1px solid grey; /* Set border for search button */
+}
+#SearchName[type=text] {
+    width: 7rem;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+
+  #SearchName[type=text]:focus {
+    width: 22rem;
+  }
+
+/* Additional styles for elements with ID 'a' */
+#a {
+    width: 2rem; /* Fixed width */
+    height: 4rem; /* Fixed height */
+    text-align: center; /* Center align text */
+    
+}
+
+/* Paragraph styles */
+p {
+    background-color: var(--2); /* Slightly lighter gray background */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 0.5rem; /* Space inside paragraphs */
+    
+}
+
+/* Heading styles */
+h2 {
+    text-align: center; /* Center align headings */
+}
+
+/* ----------------------------------------
+   Meal Display Styles
+   Styles specifically for meal display items.
+---------------------------------------- */
+.meal {
+    width: 15rem; /* Fixed width for meal items */
+    height: 19rem; /* Fixed height for meal items */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    overflow: hidden; /* Hide overflow */
+}
+
+b {
+    background-color: var(--1);
+    
+}
+
+#yt {
+    width: 10rem;
+    height: 4rem;
+}
+
+#hr{
+    width: 100%;
+}
+
+#meal-d {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    flex-wrap: wrap;
+}
+
+#pr {
+    width: 60%;
+}
+
+#h {
+    font-size: 2rem;
+}

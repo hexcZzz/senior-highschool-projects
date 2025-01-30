@@ -13,9 +13,6 @@
     --dark-accent: #2b2b2b; /* Dark Accent Color */
 }
 
-input::placeholder {
-    color:var(--t3);
-}
 * {
     margin: 0;
     padding: 0;
@@ -125,11 +122,15 @@ body {
     position: relative;
 }
 
+
+    
+
 .form-outer form .page .field .label {
     position: absolute;
     top: -30px;
     font-weight: 500;
     color: var(--t2);
+   
 }
 
 .input-wrapper {
@@ -146,15 +147,17 @@ body {
     color: var(--t1);
     background: var(--pbg);
 }
-
+#username-error , #password-error{
+    display: none;
+}
 .validation-icon {
+    display: none; /* Ensure the icon is hidden by default */
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--t2);
     font-size: 18px;
-    display: none; /* Hide by default */
 }
 
 input.error-visible + .validation-icon {

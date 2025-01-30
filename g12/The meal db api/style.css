@@ -1,0 +1,134 @@
+:root {
+    --1: #151515;   /* Dark gray - Primary content background or text */
+    --2: #202020;   /* Slightly lighter dark gray - Secondary content or borders */
+    --4: #404040;   /* Medium gray - Accents or buttons */
+    --br: #303030;  /* Border color - Dark gray for borders */
+    --bg: #000000;  /* Black - Page background */
+    --pbg: #101010; /* Almost black - Panel background or containers */
+    --t1: #FFFFFF;  /* White - Primary text */
+    --t2: #AAAAAA;  /* Light gray - Secondary text */
+    --t3: #444444;  /* Darker gray - Tertiary text or disabled elements */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: var(--t1);
+    background-color: var(--bg);
+    text-decoration: none;
+}
+
+.input {
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.meal {
+    background-color: var(--4); /* Medium gray */
+    padding: 12px;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--t1); /* White text */
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: var(--2); /* Slightly lighter gray for buttons */
+    color: var(--t1); /* White text */
+    width: 100%;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+}
+
+.title {
+    font-size: 32px;
+    color: var(--t1); /* Primary white text */
+}
+
+nav {
+    padding: 24px;
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--1); /* Dark gray nav background */
+    border-bottom: 1px solid var(--br); /* Border color */
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    color: var(--t1); /* White for links */
+}
+
+a:hover {
+    color: var(--t2); /* Light gray for hover effect */
+}
+
+
+.meal-details {
+    padding: 12px;
+    background-color: var(--pbg); /* Panel background */
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--t1);
+    text-align: center;
+}
+
+.meal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.ingredient-image {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 8px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.meal-flag {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 8px;
+}
+
+.ingredient-image {
+  width: 30px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 8px;
+}
+
+#SearchName:focus {
+  outline: none;
+  box-shadow: none;
+}

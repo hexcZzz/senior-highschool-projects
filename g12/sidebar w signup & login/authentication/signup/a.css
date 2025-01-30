@@ -14,7 +14,7 @@
 }
 
 input::placeholder {
-    color:var(--t3);
+    color: var(--t3);
 }
 
 * {
@@ -31,7 +31,6 @@ body {
     min-height: 100vh;
     overflow: hidden;
     background: var(--bg);
-    
 }
 
 ::selection {
@@ -55,11 +54,13 @@ body {
     margin: 0 0 30px 0;
     color: var(--t1);   
 }
+
 .container header div {
     display: flex;
     justify-content: flex-start;
-    color:var(--br);
+    color: var(--br);
 }
+
 .container .form-outer {
     width: 100%;
     overflow: hidden;
@@ -68,6 +69,10 @@ body {
 .container .form-outer form {
     display: flex;
     width: 400%;
+}
+
+.field .gen {
+    width: 90%;
 }
 
 .form-outer form .page {
@@ -98,22 +103,14 @@ form .page .field .label {
     color: var(--t2);
 }
 
-form .page .field input {
+form .page .field input, 
+form .page .field select {
     height: 100%;
     width: 100%;
     border: 1px solid var(--br);
     border-radius: 5px;
     padding-left: 15px;
     font-size: 18px;
-    color: var(--t1);
-    background: var(--pbg);
-}
-
-form .page .field select {
-    width: 100%;
-    padding-left: 10px;
-    font-size: 17px;
-    font-weight: 500;
     color: var(--t1);
     background: var(--pbg);
 }
@@ -134,6 +131,8 @@ form .page .field button {
     transition: 0.5s ease;
 }
 
+
+
 form .page .field button:hover {
     background: var(--br);
 }
@@ -153,13 +152,15 @@ form .page .btns button.next {
 
 .container .progress-bar {
     display: flex;
+    align-items: center;
     margin: 40px 0;
     user-select: none;
+    position: relative; /* Ensure correct positioning */
 }
 
 .container .progress-bar .step {
     text-align: center;
-    width: 100%;
+    width: 25%;
     position: relative;
 }
 
@@ -173,7 +174,7 @@ form .page .btns button.next {
 .progress-bar .step .bullet {
     height: 25px;
     width: 25px;
-    border: 2px solid var(--t1);
+    border: 2px solid var(--t2);
     display: inline-block;
     border-radius: 50%;
     position: relative;
@@ -184,53 +185,16 @@ form .page .btns button.next {
 }
 
 .progress-bar .step .bullet.active {
-    border-color: var(--dark-accent);
+    border-color: var(--t1);
     background: var(--dark-accent);
 }
 
 .progress-bar .step .bullet span {
+    display: inline-block;
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    color: var(--t1);
-}
-
-.progress-bar .step .bullet.active span {
-    display: none;
-}
-
-.progress-bar .step .bullet:before,
-.progress-bar .step .bullet:after {
-    position: absolute;
-    content: '';
-    bottom: 11px;
-    right: -51px;
-    height: 3px;
-    width: 44px;
-    background: var(--br);
-}
-
-.progress-bar .step .bullet.active:after {
-    background: var(--dark-accent);
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: animate 0.3s linear forwards;
-}
-
-@keyframes animate {
-    100% {
-        transform: scaleX(1);
-    }
-}
-
-.progress-bar .step:last-child .bullet:before,
-.progress-bar .step:last-child .bullet:after {
-    display: none;
-}
-
-.progress-bar .step p.active {
-    color: var(--dark-accent);
-    transition: 0.2s linear;
+    transform: translate(-50%, -50%);
 }
 
 .progress-bar .step .check {
@@ -240,10 +204,91 @@ form .page .btns button.next {
     font-size: 15px;
     transform: translate(-50%, -50%);
     display: none;
-    color: var(--t1);
 }
 
 .progress-bar .step .check.active {
     display: block;
     color: var(--t1);
+}
+
+.progress-bar .step .bullet.active span {
+    display: none;
+}
+
+.progress-bar .step .bullet.active .check {
+    display: block;
+    color: var(--t1);
+}
+
+.progress-bar .step .line {
+    position: absolute;
+    height: 3px;
+    background: var(--t2);
+    top: 50%;
+    left: 0;
+    width: calc(100% + 10px); /* Extend beyond each step */
+    z-index: -1;
+    transition: background 0.3s ease;
+}
+
+.progress-bar .step:not(:last-child) .line {
+    display: block;
+}
+
+.progress-bar .step.active .line {
+    background: var(--t1);
+}
+
+.dob-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.dob-fields select {
+    width: calc(33.3333% - 10px); /* Ensure consistent width */
+    height: 45px; /* Set a fixed height */
+    background: var(--pbg);
+    color: var(--t1);
+    border: 1px solid var(--br);
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding in width and height */
+    appearance: none; /* Remove default styling for consistency */
+}
+
+.dob-fields select:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--br); /* Add a subtle shadow for focus */
+}
+
+/* Ensure no overlap or shift in elements */
+.dob-fields select option {
+    background: var(--pbg); /* Match the background color */
+    color: var(--t1); /* Match text color */
+}
+#username-error , #password-error{
+    display: none;
+}
+.validation-icon {
+    display: none; /* Ensure the icon is hidden by default */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--t2);
+    font-size: 18px;
+}
+
+input.error-visible + .validation-icon {
+    display: inline; /* Show icon when input has error-visible class */
+}
+
+input:focus + .validation-icon {
+    display: none; /* Hide icon when input is focused */
+}
+
+input:not(:placeholder-shown) + .validation-icon {
+    display: none; /* Hide icon when input has text */
 }
