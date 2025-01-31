@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="temp tool">
+    <meta name="keywords" content="portfolio, skills, projects, web development, design">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="English">
+    <meta name="author" content="Jerome M Abanda">
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.ibb.co/MShwbSR/1714459143653.png" type="image/x-icon">
+    <title>jsz temp</title>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/temp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body data-aos="fade-up" data-aos-delay="550">
+    <a href="../index.html"><i class="fa fa-arrow-left" style="font-size:30px;color:var( ---quaternary-color);padding:40px;"></i></a>
+    <section>
+        <div><img id="img-logo" src="https://i.ibb.co/5sMnG0S/20240430-180918.jpg"></div> <!-- Close img tag -->
+        <div id="title">temp calculator</div>
+        
+        <div class="choices1">
+            <i class="fa fa-thermometer-three-quarters logo" style="font-size:35px;"></i>
+            <input id="inpP" type="number" oninput="updateResult()" >
+            <select id="dropdown" onchange="updateResult()">
+                <option value="choice1">farenheight to celcius</option>
+                <option value="choice2">celcius to farenheight</option>
+            </select>
+            <p id="res">Result : <span id="result"></span></p>
+        </div>
+    </section>
+    <!-- JavaScript Links -->
+    <script src="../js/jsztemp.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

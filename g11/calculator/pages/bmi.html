@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Meta tags -->
+   <meta charset="UTF-8">
+    <meta name="description" content="bmi tool">
+    <meta name="keywords" content="portfolio, skills, projects, web development, design">
+    <meta name="robots" content="index, follow">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="language" content="English">
+     <meta name="author" content="Jerome M Abanda">
+      <!-- Favicon -->
+    <link rel="icon" href="https://i.ibb.co/MShwbSR/1714459143653.png" type="image/x-icon">
+      <title>jsz bmi</title>     
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bmi.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body data-aos="fade-up" data-aos-delay="550">
+    <a href="../index.html"><i class="fa fa-arrow-left" style="font-size:30px;color:lime;padding:40px;"></i></a>
+    
+    <section>
+        <!-- Logo -->
+        <div><img id="img-logo" src="https://i.ibb.co/fxmrQxk/20240430-180715.jpg">  </img></div>
+        
+        <!-- Title -->
+        <div id="title">bmi calculator</div>
+        
+        <!-- Inputs and Button -->
+        <div class="choices12">
+            <i class="fa fa-male logobmi" style="font-size:35px;"></i>
+            <div class="inputs">
+                <div id="height">
+                <input placeholder="input height" id="HEIGHT" type="number" class="h">
+                <p id="val">(cm)</p>    
+                </div>
+                <div id="weight ">
+                <input placeholder="input weight" id="WEIGHT" type="number" class="w">
+                <p id="val">(kg)</p>
+                </div>
+                <input id="BUTTONN" type="button" value="calculate" onclick="calculate()">
+               
+               <!-- Result Display -->
+               <!--  
+               <p id="res">Result : <span id="result"></span></p>-->
+           
+        </div>
+     
+       <div class="popup-background">
+            <div class="popup">
+                <div class="result-header">
+                    <p class="result-title">Result</p>
+                  <a class="close" onclick="closePopup()"><img class="x" src="https://i.ibb.co/31kq1LS/1714529581551.png" alt="ㅤ"></img></a>
+                </div>
+                <div class="result-container">
+                  
+                    <p class="bmi-result"></p>
+                </div>
+            
+    </section>
+    
+    <!-- JavaScript files -->
+    <script src="../js/jszbmi.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
