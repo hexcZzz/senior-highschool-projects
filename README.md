@@ -3,7 +3,7 @@
 This repository contains all my **Grade 11 and Grade 12 ICT projects**, covering web development, programming, databases, and other ICT-related topics. It serves as a record of my learning journey and showcases various skills and technologies I’ve worked with.  
 
 ## Repository Structure
-
+```
 ├── g11
 │   ├── DiceRoller
 │   ├── NumGuess
@@ -29,3 +29,4 @@ This repository contains all my **Grade 11 and Grade 12 ICT projects**, covering
     └── src
         ├── assets
         └── components
+```
